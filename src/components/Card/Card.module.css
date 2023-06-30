@@ -1,0 +1,161 @@
+.flipCard {
+    background-color: transparent;
+    width: 190px;
+    height: 254px;
+    perspective: 1000px;
+    font-family: sans-serif;
+
+}
+
+.inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+
+.flipCard:hover .inner {
+    transform: rotateY(180deg);
+}
+
+.front,
+.back {
+    box-shadow: 0 8px 14px 0 rgba(0, 0, 0, 0.2);
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    border: 1px solid rgb(20, 114, 20);
+    border-radius: 1rem;
+}
+
+.front {
+    background: linear-gradient(to right top, #2b662d, #2f7b31, #329033, #36a635, #3bbd36, #53c938, #68d439, #7de03b, #9be344, #b5e64f, #cce85c, #e0eb6b);
+    color: coral;
+}
+
+.back {
+    background: linear-gradient(to right top, #2b662d, #2f7b31, #329033, #36a635, #3bbd36, #53c938, #68d439, #7de03b, #9be344, #b5e64f, #cce85c, #e0eb6b);
+    color: white;
+    transform: rotateY(180deg);
+    width: 100%;
+    height: 100%;
+}
+
+.close {
+    display: flex;
+    position: absolute;
+    top: .1rem;
+    left: 5.5rem;
+    border-radius: 2.3rem;
+    border: none;
+    height: 1.4rem;
+    width: 1.4rem;
+    font-weight: 900;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.164);
+    background-color: rgb(173, 15, 15);
+    color: white;
+    cursor: pointer;
+
+    &:hover {
+        background-color: white;
+        color: rgb(173, 15, 15);
+        transition-duration: .4s;
+    }
+}
+
+.img {
+    width: 100%;
+    height: 100%;
+    border-radius: 1rem;
+}
+
+@font-face {
+    font-family: "RickAndMorty";
+    src: url("../Fonts/get-schwifty.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "LiveOrDead";
+    src: url("../Fonts/BLOODY.TTF") format("truetype");
+}
+
+@font-face {
+    font-family: "Future";
+    src: url("../Fonts/DS-DIGIT.TTF") format("truetype");
+}
+
+@font-face {
+    font-family: "Id";
+    src: url("../Fonts/Bad\ Signal.otf") format("truetype")
+}
+
+.name {
+    font-size: 1.8em;
+    font-weight: 900;
+    text-align: center;
+    margin: 0;
+    font-family: "RickAndMorty", sans-serif;
+    background-color: red;
+}
+
+.link {
+    color: #07460f;
+    text-decoration: none;
+    height: 40px;
+    position: absolute;
+    top: 2rem;
+    left: 5%;
+    margin-bottom: 1rem;
+}
+
+.status {
+    font-size: 1.5em;
+    font-weight: 900;
+    text-align: start;
+    margin: 0.5rem;
+    color: #145e1c;
+    font-family: "LiveOrDead", sans-serif;
+}
+
+.specie {
+    font-size: 1.2em;
+    font-weight: 600;
+    text-align: center;
+    margin: 0.2rem;
+    font-family: "Future", sans-serif;
+    color: #145e1c;
+}
+
+.gender {
+    font-size: 1.5em;
+    font-weight: 700;
+    text-align: center;
+    margin: 0.2rem;
+    font-family: "Future", sans-serif;
+    color: #145e1c;
+}
+
+.id {
+    font-size: 1.5em;
+    font-weight: 900;
+    text-align: center;
+    margin: 0;
+    display: flex;
+    position: absolute;
+    top: 13.5rem;
+    left: 5.5rem;
+    font-family: "Id", sans-serif;
+}
+
+.favorite {
+    position: absolute;
+    top: 0%;
+    left: 0%;
+}
