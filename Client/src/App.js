@@ -13,15 +13,21 @@ function App() {
    let [characters, setCharacters] = useState([])
    const [access, setAccess] = useState(false)
 
-   const EMAIL = "jesusito777@yahoo.cam"
-   const PASSWORD = "fakes1234"
+   // const EMAIL = "jesusito777@yahoo.cam"
+   // const PASSWORD = "fakes1234"
 
    const navigate = useNavigate();
 
-   const login = (userData) => {
-      if (userData.password === PASSWORD && userData.email === EMAIL) {
-         setAccess(true);
-         navigate("/home")
+   async function login(userData) {
+      const { email, password } = userData;
+      const URL = 'http://localhost:3001/rickandmorty/login/';
+      try {
+         const { data } = await axios(URL + `?email=${email}&password=${password}`)
+         const { access } = data;
+         setAccess(data);
+         access && navigate('/home');
+      } catch (error) {
+         window.alert(error.message)
       }
    }
 
@@ -33,15 +39,15 @@ function App() {
       !access && navigate('/');
    }, [access]);
 
-   function onSearch(id) {
-      axios(`https://rickandmortyapi.com/api/character/${id}`)
-         .then(({ data }) => {
-            if (data.name) {
-               setCharacters((oldChars) => [...oldChars, data]);
-            } else {
-               console.log(data)
-            }
-         });
+   async function onSearch(id) {
+      try {
+         const { data } = await axios(`http://localhost:3001/rickandmorty/character/${id}`)
+         if (data.name) {
+            setCharacters((oldChars) => [...oldChars, data]);
+         }
+      } catch (error) {
+         window.alert(error.message)
+      }
    }
 
    function random() {

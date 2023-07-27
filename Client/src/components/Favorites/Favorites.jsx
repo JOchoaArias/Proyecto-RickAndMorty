@@ -18,15 +18,17 @@ export const Favorites = ({ myFavorites }) => {
     const handleShow = () => {
         dispatch(showFavs())
     }
-
+    console.log(myFavorites);
     return <div >
-        <div>
-            <button onClick={handleShow}>Show All Favorites</button>
-            <select onChange={handleOrder}>
+        <div className={style.sidebarBox}>
+            <button onClick={handleShow} className={style.showButton}>Show All Favorites</button>
+            <select onChange={handleOrder} className={style.sidebar}>
+
                 <option value="A">Ascendente</option>
                 <option value="D">Descendente</option>
             </select>
-            <select onChange={handleFilter}>
+            <select onChange={handleFilter} className={style.sidebar}>
+
                 <option value="Male">Male</option>
                 <option value="Female">Female</option>
                 <option value="Genderless">Genderless</option>
@@ -44,7 +46,7 @@ export const Favorites = ({ myFavorites }) => {
                     origin={fav.origin}
                     gender={fav.gender}
                     image={fav.image}
-                    onClose={fav.onClose}
+                // onClose={fav.onClose}
                 />
             ))}
         </div>

@@ -1,0 +1,57 @@
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-template-rows: 1fr 1fr;
+    gap: 10px;
+    padding: 20px;
+    justify-content: start;
+    justify-items: center;
+}
+
+.sidebarBox {
+    display: block;
+    padding: 5px 10px;
+    height: 42px;
+    margin: 10px auto;
+    min-width: 225px;
+
+    height: 34px;
+    background: linear-gradient (to bottom, #df1313 0%, #cf0707 100%);
+    background-repeat: no-repeat, repeat;
+    background-position: right .7em top 50%, 0 0;
+    background-size: .65em auto, 100%;
+}
+
+.sidebar {
+    width: 140px;
+    height: 34px;
+    overflow: hidden;
+    margin: .2rem;
+    border: 1px solid #ccc;
+    background-image: url("../Images/descarga.jpeg");
+    background-size: cover;
+    background-position: center;
+    color: rgb(124, 11, 158);
+    font-size: 1.1rem;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-shadow: 2px 2px 4px #000000;
+    text-align: center;
+    cursor: pointer;
+}
+
+.showButton {
+    width: 150px;
+    height: 34px;
+    border: 1px solid #ccc;
+    border-radius: 2rem;
+    margin: .5rem;
+    margin-right: 4rem;
+    background-image: url("../Images/descarga.jpeg");
+    background-size: cover;
+    background-position: center;
+    color: yellow;
+    font-size: 1.1rem;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-shadow: 2px 2px 4px #000000;
+    cursor: pointer;
+}

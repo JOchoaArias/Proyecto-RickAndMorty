@@ -1,0 +1,188 @@
+.container {
+    width: 100%;
+    height: 50rem;
+    position: absolute;
+    top: 10%;
+}
+
+.image {
+    position: absolute;
+    left: 10%;
+    top: 20%;
+    background-color: #f0f0f0;
+    border-radius: 2rem;
+    background-size: 100% 100%;
+    color: #1ee40c;
+    background: #1ee40c;
+
+}
+
+.info {
+    position: absolute;
+    left: 40%;
+    top: 20%;
+    width: 45rem;
+    height: 20rem;
+}
+
+.name {
+    font-size: 3.2rem;
+    font-weight: 600;
+    text-align: center;
+    margin: 0.2rem;
+    font-family: "Future", sans-serif;
+    color: #0cd5e4;
+    text-shadow: 2px 2px 4px #ff00dd;
+}
+
+.status {
+    font-size: 2rem;
+    font-weight: 600;
+    text-align: center;
+    margin: 0.2rem;
+    font-family: "Future", sans-serif;
+    color: #e40cd2;
+    text-shadow: 2px 2px 4px #000000;
+}
+
+.specie {
+    font-size: 2rem;
+    font-weight: 600;
+    text-align: center;
+    margin: 0.2rem;
+    font-family: "Future", sans-serif;
+    color: #1ee40c;
+    text-shadow: 2px 2px 4px #d30505e1;
+}
+
+.gender {
+    font-size: 2rem;
+    font-weight: 600;
+    text-align: center;
+    margin: 0.2rem;
+    font-family: "Future", sans-serif;
+    color: #e4b20c;
+    text-shadow: 2px 2px 4px #010505;
+}
+
+.origin {
+    font-size: 2rem;
+    font-weight: 600;
+    text-align: center;
+    margin: 0.2rem;
+    font-family: "Future", sans-serif;
+    color: #e40c78;
+    text-shadow: 2px 2px 4px #010202;
+}
+
+.inputform {
+    filter: drop-shadow(46px 36px 24px #4090b5) drop-shadow(-55px -40px 25px #9e30a9);
+    animation: blinkShadowsFilter 8s ease-in infinite;
+    width: 631px;
+    height: 279px;
+
+}
+
+.inputcontent {
+    display: grid;
+    align-content: center;
+    justify-items: center;
+    align-items: center;
+    text-align: center;
+    padding-inline: 1em;
+    width: 631px;
+    height: 279px;
+
+}
+
+.inputcontent::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    filter: blur(40px);
+    -webkit-clip-path: polygon(26% 0, 66% 0, 92% 0, 100% 8%, 100% 89%, 91% 100%, 7% 100%, 0 92%, 0 0);
+    clip-path: polygon(26% 0, 66% 0, 92% 0, 100% 8%, 100% 89%, 91% 100%, 7% 100%, 0 92%, 0 0);
+    background: rgba(122, 251, 255, 0.5568627451);
+    transition: all 1s ease-in-out;
+}
+
+.inputcontent::after {
+    content: "";
+    position: absolute;
+    width: 98%;
+    height: 98%;
+    box-shadow: inset 0px 0px 20px 20px #212121;
+    background: repeating-linear-gradient(to bottom, transparent 0%, rgba(64, 144, 181, 0.6) 1px, rgb(0, 0, 0) 3px, hsl(295, 60%, 12%) 5px, #153544 4px, transparent 0.5%), repeating-linear-gradient(to left, hsl(295, 60%, 12%) 100%, hsla(295, 60%, 12%, 0.99) 100%);
+    -webkit-clip-path: polygon(26% 0, 31% 5%, 61% 5%, 66% 0, 92% 0, 100% 8%, 100% 89%, 91% 100%, 7% 100%, 0 92%, 0 0);
+    clip-path: polygon(26% 0, 31% 5%, 61% 5%, 66% 0, 92% 0, 100% 8%, 100% 89%, 91% 100%, 7% 100%, 0 92%, 0 0);
+    animation: backglitch 50ms linear infinite;
+}
+
+.inputdist {
+    z-index: 80;
+    display: grid;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    padding-inline: 1em;
+    padding-block: 1.2em;
+    grid-template-columns: 1fr;
+}
+
+.inputtype {
+    z-index: 80;
+    display: grid;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    padding-inline: 1em;
+    padding-block: 1.2em;
+    grid-template-columns: 1fr;
+}
+
+.inputcontent:focus-within::before {
+    transition: all 1s ease-in-out;
+    background: hsla(0, 0%, 100%, 0.814);
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg) translate(-50%, 20%);
+    }
+
+    50% {
+        transform: rotate(180deg) translate(40%, 10%);
+    }
+
+    to {
+        transform: rotate(360deg) translate(-50%, 20%);
+    }
+}
+
+@keyframes blinkShadowsFilter {
+    0% {
+        filter: drop-shadow(46px 36px 28px rgba(64, 144, 181, 0.3411764706)) drop-shadow(-55px -40px 28px #9e30a9);
+    }
+
+    25% {
+        filter: drop-shadow(46px -36px 24px rgba(64, 144, 181, 0.8980392157)) drop-shadow(-55px 40px 24px #9e30a9);
+    }
+
+    50% {
+        filter: drop-shadow(46px 36px 30px rgba(64, 144, 181, 0.8980392157)) drop-shadow(-55px 40px 30px rgba(159, 48, 169, 0.2941176471));
+    }
+
+    75% {
+        filter: drop-shadow(20px -18px 25px rgba(64, 144, 181, 0.8980392157)) drop-shadow(-20px 20px 25px rgba(159, 48, 169, 0.2941176471));
+    }
+
+    to {
+        filter: drop-shadow(46px 36px 28px rgba(64, 144, 181, 0.3411764706)) drop-shadow(-55px -40px 28px #9e30a9);
+    }
+}
+
+@font-face {
+    font-family: "Future";
+    src: url("../Fonts/DS-DIGIT.TTF") format("truetype");
+}

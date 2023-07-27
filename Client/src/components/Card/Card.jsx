@@ -25,7 +25,7 @@ export function Card({ id, name, status, species, gender, origin, image, onClose
          gender,
          origin,
          image,
-         myFavorites,
+         // myFavorites,
          onClose
       }
 
@@ -50,20 +50,27 @@ export function Card({ id, name, status, species, gender, origin, image, onClose
                <div className={style.favorite}>
                   {
                      isFav ? (
-                        <button onClick={handleFavorite}>❤️</button>
+                        <button onClick={handleFavorite} className={style.favoriteButton}>❤️</button>
                      ) : (
-                        <button onClick={handleFavorite}>🤍</button>
+                        <button onClick={handleFavorite} className={style.favoriteButton}>🤍</button>
                      )
                   }
                </div>
-               <button onClick={() => onClose(id)} className={style.close}>X</button>
+               {
+                  onClose ? (
+                     <button onClick={() => onClose(id)} className={style.close}>X</button>
+
+                  ) : (
+                     ""
+                  )
+               }
                <Link to={`/detail/${id}`} className={style.link}>
                   <h2 className={style.name}>{name}</h2>
                </Link>
                <h2 className={style.status}>State: {status}</h2>
-               <h2 className={style.specie}>Specie: {species}</h2>
-               <h2 className={style.gender}>Gender: {gender}</h2>
-               {/*<h2 className={style.origin}>{origin.name}</h2>*/}
+               <h2 className={style.specie}> {species}</h2>
+               <h2 className={style.gender}> {gender}</h2>
+               <h2 className={style.origin}>{origin}</h2>
                <h2 className={style.id}>{id}</h2>
 
             </div>

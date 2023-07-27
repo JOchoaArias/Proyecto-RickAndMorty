@@ -41,7 +41,9 @@
 }
 
 .back {
-    background: linear-gradient(to right top, #2b662d, #2f7b31, #329033, #36a635, #3bbd36, #53c938, #68d439, #7de03b, #9be344, #b5e64f, #cce85c, #e0eb6b);
+    background-image: url("../Images/FondoCartas.jpeg");
+    background-size: cover;
+    background-position: center;
     color: white;
     transform: rotateY(180deg);
     width: 100%;
@@ -102,25 +104,39 @@
     text-align: center;
     margin: 0;
     font-family: "RickAndMorty", sans-serif;
-    background-color: red;
+    /* background-color: red; */
+    width: 100%;
+    height: 100%;
+    text-shadow: 2px 2px 4px #04c2cf;
+
 }
 
 .link {
-    color: #07460f;
+    color: rgb(246, 250, 9);
     text-decoration: none;
     height: 40px;
-    position: absolute;
+    /* position: absolute; */
     top: 2rem;
-    left: 5%;
-    margin-bottom: 1rem;
+    overflow: hidden;
+    /* margin: .3rem; */
+    margin-bottom: 1.3rem;
+    width: 100%;
+    /* background-image: url("../Images/descarga.jpeg");
+    background-size: cover;
+    background-position: center;
+    border-radius: .2rem; */
+
+    &:hover {
+        text-decoration: underline;
+    }
 }
 
 .status {
     font-size: 1.5em;
     font-weight: 900;
-    text-align: start;
-    margin: 0.5rem;
-    color: #145e1c;
+    text-align: center;
+    margin: 0.2rem;
+    color: #6904a3;
     font-family: "LiveOrDead", sans-serif;
 }
 
@@ -130,7 +146,7 @@
     text-align: center;
     margin: 0.2rem;
     font-family: "Future", sans-serif;
-    color: #145e1c;
+    color: #cf04ad;
 }
 
 .gender {
@@ -139,7 +155,7 @@
     text-align: center;
     margin: 0.2rem;
     font-family: "Future", sans-serif;
-    color: #145e1c;
+    color: #13e7f7;
 }
 
 .id {
@@ -149,13 +165,41 @@
     margin: 0;
     display: flex;
     position: absolute;
-    top: 13.5rem;
+    top: 14.4rem;
     left: 5.5rem;
     font-family: "Id", sans-serif;
+    color: #8405ce;
+}
+
+.origin {
+    font-size: 1.2rem;
+    font-weight: 400;
+    text-align: center;
+    margin: 0.2rem;
+    font-family: "Future", sans-serif;
+    color: rgb(246, 250, 9);
+    /* background-image: url("../Images/descarga.jpeg");
+    background-size: cover;
+    background-position: center; */
+    width: 98%;
 }
 
 .favorite {
     position: absolute;
     top: 0%;
     left: 0%;
+    height: 2rem;
+    width: 2rem;
+}
+
+.favoriteButton {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    text-align: center;
+    font-size: 100%;
+    font-weight: 100%;
 }
