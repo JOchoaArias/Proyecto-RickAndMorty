@@ -34,10 +34,6 @@
 .logo {
     height: 35%;
     width: 35%;
-    /* background-image: url("../Images/FondoCartas.jpeg");
-    background-size: cover;
-    background-position: center; */
-    border-color: green;
     border-radius: 1rem;
     margin-bottom: 2rem;
 }
