@@ -56,7 +56,8 @@ function App() {
    }
 
    const onClose = (id) => {
-      const filteredCharacters = characters.filter((character) => character.id != id)
+      const filteredCharacters = characters.filter((character) => character.id !== id)
+      console.log(filteredCharacters);
       setCharacters(filteredCharacters);
    }
 

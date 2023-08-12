@@ -1,7 +1,7 @@
 .App {
    text-align: center;
    min-height: 100vh;
-   background-color: aquamarine;
+   background-color: rgb(111, 117, 115);
    background-image: url("./components/Images/85328.jpg");
    background-size: 100% 100%;
 }

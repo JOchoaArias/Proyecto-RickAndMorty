@@ -1,5 +1,5 @@
 .nav {
-    background-color: aqua;
+    background-color: rgb(40, 33, 102);
     display: flex;
     height: 6vh;
 }
@@ -10,7 +10,7 @@
     border: none;
     width: 6rem;
     height: 2rem;
-    background-color: rgb(169, 107, 228);
+    background-color: rgb(228, 107, 208);
     color: black;
     text-decoration: none;
     font-size: 1.3rem;
@@ -38,7 +38,7 @@
     border: none;
     width: 6rem;
     height: 2rem;
-    background-color: rgb(169, 107, 228);
+    background-color: rgb(216, 230, 13);
     color: black;
     text-decoration: none;
     font-size: 1.3rem;

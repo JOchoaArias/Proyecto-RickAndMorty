@@ -15,7 +15,7 @@ export default function SearchBar({ onSearch, random }) {
             onChange={handleChange}
             value={id}
             className={style.input}
-            placeholder="Introduce un Id" />
+            placeholder="Introduce un Id (1-826)" />
          <button onClick={() => onSearch(id)} className={style.button}>Agregar</button>
          <button className={style.button} onClick={random}>Random Character</button>
       </div>
